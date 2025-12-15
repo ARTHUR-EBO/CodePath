@@ -1,0 +1,125 @@
+/* ===============================
+   PERFIL.CSS - Moderno, elegante e profissional
+   Paleta: roxo, preto, azul escuro
+================================ */
+
+:root {
+    --roxo: #8b5cf6;
+    --roxo-escuro: #5b21b6;
+    --azul-escuro: #1e1b4b;
+    --preto: #0a0a0a;
+    --cinza: #c9c9c9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--azul-escuro), #000);
+    color: white;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--roxo);
+}
+
+.btn.voltar {
+    padding: 10px 20px;
+    background: var(--roxo);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn.voltar:hover {
+    background: var(--roxo-escuro);
+}
+
+/* ================= CARD DO PERFIL ================= */
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.card-perfil {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.card-perfil h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--roxo);
+    font-size: 1.8rem;
+}
+
+.card-perfil p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #eaeaea;
+}
+
+.card-perfil strong {
+    color: var(--roxo);
+}
+
+/* ================= ANIMAÇÃO ================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .card-perfil {
+        padding: 20px;
+    }
+
+    .card-perfil h2 {
+        font-size: 1.4rem;
+    }
+}

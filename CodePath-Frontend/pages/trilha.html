@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trilha - CodePath</title>
+
+    <link rel="stylesheet" href="../css/trilha.css" />
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">CodePath</h1>
+
+    <div class="nav-right">
+        <a href="index.html" class="bnt index">Página inicial</a>
+        <a href="perfil.html" class="btn perfil">Perfil</a>
+        <a href="#" class="btn sair" id="logoutBtn">Sair</a>
+    </div>
+</header>
+
+<!-- PROGRESSO DA TRILHA -->
+<section class="progresso-container">
+    <h2>Seu progresso na trilha</h2>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill">0%</div>
+    </div>
+</section>
+
+<!-- TRILHA / LIÇÕES -->
+<section class="trilha-container">
+    <h2 class="titulo-trilha">Trilha de Programação</h2>
+
+    <!-- 🔥 Lições serão inseridas dinamicamente aqui -->
+    <div class="caminho" id="caminhoTrilha">
+        <p class="loading">Carregando lições...</p>
+    </div>
+</section>
+
+<script src="../js/trilha.js"></script>
+</body>
+</html>

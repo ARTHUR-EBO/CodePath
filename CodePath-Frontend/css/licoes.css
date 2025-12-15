@@ -1,0 +1,146 @@
+/* licoes.css
+   Minimalista, tons: violeta, preto e azul escuro
+*/
+
+:root{
+  --black: #07070a;
+  --dark-blue: #0f1a2b;
+  --violet: #7c3aed;
+  --violet-2: #8f6cfb;
+  --violet-light: #bfa6ff;
+  --muted: #9aa3b2;
+  --surface: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.04);
+  --accent-contrast: #0b0712;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(7,7,10,0.55);
+  --fw-bold: 600;
+  --fw-medium: 500;
+  --gap: 18px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html,body{
+  height:100%;
+  background: linear-gradient(180deg,var(--black),var(--dark-blue));
+  color: #eef0ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* NAVBAR */
+.navbar{
+  width:100%;
+  padding: 18px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(180deg, rgba(11,9,18,0.35), rgba(11,9,18,0.18));
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+}
+
+.logo{
+  font-size:1.3rem;
+  color:var(--violet-2);
+  font-weight:700;
+  letter-spacing:0.4px;
+  text-shadow: 0 6px 18px rgba(124,58,237,0.08);
+}
+
+.navbar .btn{
+  padding:8px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  font-weight:var(--fw-medium);
+  transition: all 180ms ease;
+}
+
+.navbar .btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(124,58,237,0.08);
+  border-color: rgba(167,134,255,0.18);
+}
+
+/* LAYOUT DA LIÇÃO */
+.licao-container{
+  max-width: 920px;
+  margin: 36px auto;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+#tituloLicao{
+  font-size: 1.6rem;
+  color: var(--violet-light);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.conteudo{
+  margin-top: 12px;
+  color: #dde5ff;
+  line-height: 1.7;
+  font-size: 1rem;
+  padding: 18px;
+  background: var(--surface);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 18px rgba(12,14,20,0.25) inset;
+}
+
+/* botao iniciar */
+#btnIniciar{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--violet), var(--violet-2));
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+#btnIniciar:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(124,58,237,0.18);
+}
+
+#btnIniciar:active{ transform: translateY(-1px); }
+
+/* pequenas notas / código dentro do conteúdo */
+.conteudo pre,
+.conteudo code{
+  display:block;
+  background: rgba(0,0,0,0.35);
+  padding: 12px;
+  border-radius: 8px;
+  overflow:auto;
+  font-family: "Fira Code", monospace;
+  margin-top: 12px;
+  color: #dbe7ff;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* responsividade */
+@media (max-width:920px){
+  .licao-container{ margin: 20px; padding: 18px }
+  #tituloLicao{ font-size:1.4rem }
+}
+
+@media (max-width:520px){
+  .navbar{ padding: 14px }
+  .logo{ font-size:1.1rem }
+  .conteudo{ font-size:0.96rem }
+  #btnIniciar{ width:100% }
+}

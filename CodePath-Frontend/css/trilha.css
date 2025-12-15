@@ -1,0 +1,203 @@
+/* ==========================
+   ESTILO GERAL
+   Tons: violeta, preto, azul escuro
+========================== */
+
+:root {
+    --black: #0a0a0f;
+    --dark-blue: #0d1b2a;
+    --violet: #7c3aed;
+    --violet-light: #a78bfa;
+    --white: #f3f3f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, var(--black), var(--dark-blue));
+    color: var(--white);
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--violet-light);
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right .btn,
+.nav-right .bnt {
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.3s;
+}
+
+.nav-right .btn:hover,
+.nav-right .bnt:hover {
+    transform: scale(1.05);
+    background: rgba(124, 58, 237, 0.25);
+    border-color: var(--violet-light);
+}
+
+.btn.sair {
+    background: var(--violet);
+    border-color: var(--violet);
+}
+
+.btn.sair:hover {
+    background: var(--violet-light);
+    border-color: var(--violet-light);
+}
+
+/* ==========================
+   PROGRESSO DA TRILHA
+========================== */
+
+.progresso-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.progresso-container h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 28px;
+    background: rgba(255,255,255,0.1);
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--violet), var(--violet-light));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    font-weight: bold;
+    transition: width 0.6s ease;
+}
+
+/* ==========================
+   TRILHA / LIÇÕES
+========================== */
+
+.trilha-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.titulo-trilha {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.caminho {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Loading */
+.loading {
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+/* Bloco de lição */
+.bloco {
+    width: 240px;
+    padding: 18px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 14px;
+    margin: 18px 0;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(6px);
+}
+
+.bloco:hover {
+    transform: scale(1.05);
+    background: rgba(124, 58, 237, 0.3);
+    border-color: var(--violet-light);
+}
+
+/* Linha entre lições */
+.linha {
+    width: 4px;
+    height: 60px;
+    background: linear-gradient(var(--violet), var(--violet-light));
+    border-radius: 4px;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 20px;
+    }
+
+    .bloco {
+        width: 190px;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .progress-bar {
+        width: 90%;
+    }
+
+    .linha {
+        height: 40px;
+    }
+}
