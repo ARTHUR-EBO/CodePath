@@ -1,6 +1,11 @@
-CREATE DATABASE IF NOT EXISTS codepath;
+-- 1️⃣ Apagar banco antigo (opcional)
+DROP DATABASE IF EXISTS codepath;
+
+-- 2️⃣ Criar banco
+CREATE DATABASE codepath;
 USE codepath;
 
+-- 3️⃣ Criar tabelas
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -48,13 +53,12 @@ CREATE TABLE progresso_trilha (
     trilha_id INT NOT NULL,
     progresso INT DEFAULT 0,
     atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (trilha_id) REFERENCES trilhas(id)
 );
 
 CREATE TABLE progresso_licao (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     licao_id INT NOT NULL,
     concluida BOOLEAN NOT NULL DEFAULT 0,
