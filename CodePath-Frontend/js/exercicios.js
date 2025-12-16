@@ -68,14 +68,14 @@ btnProximo.onclick = async () => {
 
     if (exercicioAtual > exercicios.length) {
         // Finalizou lição
-        await fetch(`${API_URL}/progresso-licao`, {
+        await fetch(`${API_URL}/progresso_licao/concluir`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                user_id: localStorage.getItem("userId"),
-                licao_id: licaoId
+              user_id: localStorage.getItem("userId"),
+              licao_id: licaoId
             })
-        });
+          });
 
         window.location.href = "../trilha.html";
     } else {

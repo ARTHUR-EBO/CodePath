@@ -32,4 +32,31 @@ async function carregarTrilha() {
     }
 }
 
+async function carregarProgressoTrilha() {
+    try {
+        const userId = localStorage.getItem("userId");
+
+        if (!userId) return;
+
+        const res = await fetch(
+            `${API_URL}/progresso_trilha/${userId}/${trilhaId}`
+        );
+
+        if (!res.ok) {
+            progressFill.style.width = "0%";
+            progressFill.textContent = "0%";
+            return;
+        }
+
+        const data = await res.json();
+
+        progressFill.style.width = data.progresso + "%";
+        progressFill.textContent = data.progresso + "%";
+
+    } catch (err) {
+        console.error("Erro ao carregar progresso da trilha", err);
+    }
+}
+
 carregarTrilha();
+carregarProgressoTrilha();

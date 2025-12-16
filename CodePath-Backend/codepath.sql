@@ -66,3 +66,6 @@ CREATE TABLE progresso_licao (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (licao_id) REFERENCES licoes(id)
 );
+
+ALTER TABLE users
+ADD COLUMN foto VARCHAR(255);
