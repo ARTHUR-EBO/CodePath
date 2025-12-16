@@ -105,6 +105,57 @@ body {
     }
 }
 
+/* ================= FOTO DE PERFIL ================= */
+
+figure {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--roxo);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    background-color: #111;
+}
+
+/* ================= UPLOAD DE FOTO ================= */
+
+.upload-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.upload-foto input[type="file"] {
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+.upload-foto button {
+    width: 100%;
+    max-width: 220px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--roxo);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-foto button:hover {
+    background: var(--roxo-escuro);
+}
+
+
 /* ================= RESPONSIVIDADE ================= */
 @media (max-width: 480px) {
     .navbar {
@@ -122,4 +173,15 @@ body {
     .card-perfil h2 {
         font-size: 1.4rem;
     }
+
+    .foto-perfil {
+        width: 130px;
+        height: 130px;
+    }
+
+    .upload-foto button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
+

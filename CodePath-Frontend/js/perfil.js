@@ -79,4 +79,34 @@ document.getElementById("btnSalvarFoto").addEventListener("click", async () => {
         console.error("Erro no upload:", err);
         alert("Erro ao enviar imagem.");
     }
+
+    document.getElementById("btnRemoverFoto").addEventListener("click", async () => {
+        if (!confirm("Deseja remover a foto?")) return;
+    
+        try {
+            const res = await fetch(
+                `http://localhost:3000/api/user/${user.id}/foto`,
+                {
+                    method: "DELETE",
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
+            );
+    
+            if (!res.ok) {
+                alert("Erro ao remover foto.");
+                return;
+            }
+    
+            document.getElementById("userFoto").src = "../img/default.png";
+            alert("Foto removida com sucesso!");
+    
+        } catch (err) {
+            console.error("Erro ao remover foto:", err);
+            alert("Erro ao remover foto.");
+        }
+    });
+    
+
 });

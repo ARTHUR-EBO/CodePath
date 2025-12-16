@@ -16,16 +16,20 @@
         <div class="card-perfil">
             <h2>Seu Perfil</h2>
 
-            <img 
-                id="userFoto" 
-                src="../img/default.png" 
-                alt="Foto do usuário"
-                class="foto-perfil"
-            />
+           <figure>
+                <img 
+                    id="userFoto" 
+                    src="../img/default.png" 
+                    width="50%"
+                    alt="Foto do usuário"
+                    class="foto-perfil"
+                />
+           </figure>
 
             <div class="upload-foto">
                 <input type="file" id="inputFoto" accept="image/*">
                 <button id="btnSalvarFoto">Salvar Foto</button>
+                <button id="btnRemoverFoto">Remover Foto</button>
             </div>
 
             <p><strong>Nome:</strong> <span id="userNome">Carregando...</span></p>

@@ -42,5 +42,20 @@ module.exports = {
       console.error("User.addXP error:", err);
       throw err;
     }
+  },
+
+  async updateFoto(id, foto) {
+    try {
+      await db.query(
+        "UPDATE users SET foto = ? WHERE id = ?",
+        [foto, id]
+      );
+    } catch (err) {
+      console.error("User.updateFoto error:", err);
+      throw err;
+    }
   }
+  
 };
+
+

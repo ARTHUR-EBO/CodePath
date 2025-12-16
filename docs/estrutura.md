@@ -75,11 +75,8 @@ CodePath/
 │    │   │   ├── cadastro.js
 │    │   │   ├── trilha.js
 │    │   │   └── licoes.js   
-│    │   │
-│    │   ├── assets/
-│    │   │   ├── images/
-│    │   │   ├── icons/
-│    │   └── logos/
+│    │  
+│    │  
 │    │
 │    └── README.md
 │
