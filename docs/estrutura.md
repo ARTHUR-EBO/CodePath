@@ -41,21 +41,17 @@ CodePath/
 │   └── server.js
 │
 │
-│    ├── CodePath-Frontend/
-│    │   ├── pages/
-│    │   │   ├── index.html
-│    │   │   ├── login.html
+│        ├── CodePath-Frontend/
+│        ├── pages/
+│        │   ├── index.html
+│        │   ├──  login.html
 │    │   │   ├── cadastro.html
 │    │   │   ├── trilha.html
 │    │   │   │── licoes/
-│    │   │   │    ├── licao1.html
-│    │   │   │    ├── licao2.html
-│    │   │   │    └── ... (futuras lições)
+│    │   │   │    ├── licao.html
 │    │   │   │
 │    │   │   └── exercicios/
-│    │   │       ├── exercicio1.html
-│    │   │       ├── exercicio2.html
-│    │   │       └── ... (futuras exercicios)
+│    │   │       ├── exercicios.html
 │    │   │
 │    │   │
 │    │   │
@@ -67,23 +63,23 @@ CodePath/
 │    │   │   ├── trilha.css
 │    │   │   ├── licoes.css   
 │    │   │   ├── perfil.css
-│    │   │   ├── estilo.css
 │    │   │   └── exercicios.css
+│    │   │  
 │    │   │   
 │    │   ├── js/
 │    │   │   ├── login.js
 │    │   │   ├── cadastro.js
 │    │   │   ├── trilha.js
 │    │   │   └── licoes.js   
-│    │  
-│    │  
-│    │
-│    └── README.md
+│      
+│     
+│    
+│    
 │
 │
 └── docs/
     ├── estrutura_projeto.md
     ├── instrucoes_instalacao.md
     ├── guia_rotas_api.md
-    ├── checklist_publicacao.md
-    └── modelos/ 
+    ├── checklist_publicacao.md 
+    └── readme.md

@@ -2,7 +2,15 @@ Pré-requisitos
 
 Node.js 18+
 
-MySQL (XAMPP ou Docker)
+Express
+
+CORS
+
+Multer
+
+MySQL 
+
+(XAMPP ou Docker)
 
 Git
 
